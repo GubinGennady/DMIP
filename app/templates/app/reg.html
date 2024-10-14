@@ -1,0 +1,79 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-52115242-14"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-52115242-14');
+    </script>
+    <meta charset="utf-8">
+    <title>Pipeline Project Management Bootstrap Theme</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A project management Bootstrap theme by Medium Rare">
+    <link href="assets/img/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1" rel="stylesheet">
+    <link href={% static "css/theme.css" %} rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body>
+<div class="d-flex justify-content-center align-items-center h-50 mt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8 col-sm-10 ">
+                    <div class="card shadow-lg p-4">
+                        <h4 class="text-center mb-4">Регистрация</h4>
+                        <form method="post">
+                            {% csrf_token %}
+                            <p>
+
+    <input type="email" name="email" maxlength="254" autofocus="" class="form-control" placeholder="Напишите ваш e-mail" required="" id="id_email">
+
+
+  </p>
+
+
+  <p>
+
+    <input type="password" name="password1" autocomplete="new-password" class="form-control" placeholder="Новый пароль" required="" id="id_password1" aria-autocomplete="list">
+
+
+  </p>
+
+
+  <p>
+
+    <input type="password" name="password2" autocomplete="new-password" class="form-control" placeholder="Повторите пароль" required="" id="id_password2">
+
+
+
+
+  </p>
+                            <button type="submit" class="btn btn-sm btn-success text-white">
+                                Зарегистрироваться
+                            </button>
+                            <br>
+                            <br>
+                            <p class="my-3 text-center">Если у вас есть аккаунт?
+                                <a href="/app/auth" class="text-primary fw-bold">Вход!</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="/static/js/websocket.js"></script>
+</body>
+</html>
