@@ -21,11 +21,16 @@ def fetch_yandex_emails(login, password, save_dir="app/attachments/yandex"):
         # Авторизуемся на сервере с использованием логина и пароля
         imap.login(username, password)
 
-        # Выбор почтового ящика (в данном случае yandex)
-        imap.select("yandex")
+        # Выбор почтового ящика (в данном случае INBOX)
+        imap.select("INBOX")  # Изменено с "yandex" на стандартный ящик "INBOX"
 
-        # Выполняем поиск всех писем в yandex
+        # Выполняем поиск всех писем в INBOX
         status, messages = imap.search(None, "ALL")
+        # Проверяем успешность поиска
+        if status != "OK":
+            print(f"Ошибка при поиске писем: {status}")
+            return emails
+
         # Получаем список ID писем
         email_ids = messages[0].split()
 

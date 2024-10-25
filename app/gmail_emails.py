@@ -12,7 +12,7 @@ def fetch_gmail_emails(username, password, save_dir="app/attachments/google"):
     imap.login(username, password)
 
     # Выбираем почтовый ящик (gmail) для чтения писем
-    imap.select("gmail")
+    imap.select("INBOX")
 
     # Ищем все письма в почтовом ящике
     status, messages = imap.search(None, "ALL")

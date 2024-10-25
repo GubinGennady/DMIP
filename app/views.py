@@ -60,6 +60,9 @@ class IndexView(TemplateView):
     # Дополнительный контекст для шаблона
     extra_context = {
         'title': 'Состояние загрузки',
+        'yandex_title': 'Yandex_почта',
+        'gmail_title': 'Gmail_почта',
+        'mail_title': 'Mail_почта',
         'fetch_yandex_emails': [],
         'fetch_gmail_emails': [],
         'fetch_mail_emails': []

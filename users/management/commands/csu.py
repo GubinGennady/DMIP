@@ -4,7 +4,7 @@ from app.models import User
 class Command(BaseCommand):
     def handle(self, *args, **options):
         superuser, created = User.objects.get_or_create(
-            username='admin',
+            username='admin1',
             defaults={
                 'first_name': 'Super',
                 'last_name': 'User',

@@ -12,7 +12,7 @@ def fetch_mail_emails(username, password, save_dir="app/attachments/mail"):
     imap.login(username, password)
 
     # Выбираем почтовый ящик (mail) для чтения писем
-    imap.select("mail")
+    imap.select("INBOX")
 
     # Ищем все письма в почтовом ящике
     status, messages = imap.search(None, "ALL")

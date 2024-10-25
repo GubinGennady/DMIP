@@ -147,6 +147,8 @@ class WSMail(AsyncWebsocketConsumer):
                 emails = EmailMessage.objects.filter(email_id=id - 1).filter(type='mail').filter(
                     user=current_user).first()
 
+
+
             # Формируем HTML для Mail.ru
             res = f''' <div class="card card-task">
 
